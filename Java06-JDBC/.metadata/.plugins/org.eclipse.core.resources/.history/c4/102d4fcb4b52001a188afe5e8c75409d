@@ -1,0 +1,18 @@
+package connection;
+
+import java.util.Properties;
+
+public enum Config {
+	URL(),USER(),PASS(),PORT();
+	
+	private ConfigurationProvider conPro;
+	private String value;
+	private final String path = getClass().getResource("//other_file//config.properties").getPath();
+
+	Config (){
+		conPro = new ConfigurationProvider(path);
+	}
+	String getValue() {
+		return (conPro == null) ? null : conPro.getProperties().getProperty(this.toString());
+	}
+}

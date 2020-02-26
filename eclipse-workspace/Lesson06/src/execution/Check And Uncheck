@@ -1,0 +1,9 @@
+có 2 loại excetion :
++ check : check at compile time(được kiểm tra ở compile)
++ uncheck(Runtime exception) : did no check at compile time , will be checked at rumtime
+
+có hai cách bắt lỗi :
++ try- catch : supicious code block causes exception exception(not - sure)
++ throws : 100% sure code blook causes exception
+
+finally :

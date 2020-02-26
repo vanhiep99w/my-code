@@ -1,0 +1,55 @@
+package homework;
+
+import java.util.Calendar;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		Calendar c=Calendar.getInstance();
+		System.out.print("Năm nay là : "+ c.get(Calendar.YEAR));
+		boolean b=isLeapYear(c);
+		if(b) System.out.println(" là Năm nhuận");
+		else System.out.println(" Không là năm nhuận");
+		System.out.println("Số ngày trong tháng "+c.get(Calendar.MONTH)+ " : "+ maximumDayInMonth(c));
+		System.out.println("Hôm nay là thứ : "+ dayOfWeek(c));
+		System.out.println("Số ngày chủ nhật trong tháng : " + sundayInTheMonth(c));
+		System.out.println(c.get(Calendar.DAY_OF_MONTH));
+		infoDay(c);
+		
+	}
+	public static boolean isLeapYear(Calendar c) {
+		boolean b=false;
+		if(c.get(Calendar.YEAR)%400==0) {
+			b=true;
+		}
+		return b;
+	}
+	public static int maximumDayInMonth(Calendar c) {
+		return c.getMaximum(Calendar.DAY_OF_MONTH);
+	}
+	public static String dayOfWeek(Calendar c) {
+		//c.set(Calendar.DAY_OF_WEEK, 1);
+		String[] days= {"Chủ Nhật ","Thứ Hai ","Thứ Ba ","Thứ Tư ","Thứ Năm ","Thứ Sáu ","Thứ Bảy "};
+		return days[c.get(Calendar.DAY_OF_WEEK)-1];
+	}
+	public static int sundayInTheMonth(Calendar c) {
+		int i=4;
+		c.set(Calendar.DAY_OF_MONTH, 1);
+		if(c.get(Calendar.DAY_OF_WEEK)==1
+				||c.get(Calendar.DAY_OF_WEEK)==1 && c.getActualMaximum(Calendar.DAY_OF_MONTH)==29
+				||c.get(Calendar.DAY_OF_WEEK)==7 && c.get(Calendar.DAY_OF_WEEK)==1 && c.getActualMaximum(Calendar.DAY_OF_MONTH)==30
+				||c.get(Calendar.DAY_OF_WEEK)==7 && c.get(Calendar.DAY_OF_WEEK)==1 
+						&& c.get(Calendar.DAY_OF_WEEK)==6&& c.getActualMaximum(Calendar.DAY_OF_MONTH)==31) {
+			i++;
+		}
+		return i;
+	}
+	public static void infoDay(Calendar c) {
+		c.set(Calendar.DAY_OF_MONTH, 1);
+		do {
+			System.out.println("Ngày : "+c.get(Calendar.DAY_OF_MONTH)+" Tháng :"+ c.get(Calendar.MONTH)+ "Thứ : "+ dayOfWeek(c) );
+			c.set(Calendar.DAY_OF_MONTH, c.get(Calendar.DAY_OF_MONTH)++);
+		}while(c.get(Calendar.DAY_OF_MONTH)<=c.getActualMaximum(Calendar.DAY_OF_MONTH));
+		
+	}
+}

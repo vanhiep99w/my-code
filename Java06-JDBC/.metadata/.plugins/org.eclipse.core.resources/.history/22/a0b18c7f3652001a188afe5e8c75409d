@@ -1,0 +1,9 @@
+package singleton;
+
+public class test {
+	
+	
+	private void sout() {
+		System.out.println();
+	}
+}

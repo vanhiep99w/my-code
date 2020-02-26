@@ -1,0 +1,66 @@
+package homework;
+
+import java.util.Calendar;
+import java.util.Scanner;
+
+
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		
+		/*Calendar c = Calendar.getInstance();
+		int day = c.get(Calendar.DAY_OF_MONTH);
+		int month = c.get(Calendar.MONTH);
+		int year = c.get(Calendar.YEAR);
+		c = scanfĐayLoving();
+		calDayLoving(day, month, year, c);
+		System.out.println(day + " " + month + " " + year);*/
+		 
+		
+		Calendar c = Calendar.getInstance();
+		c.set(Calendar.DAY_OF_MONTH, c.get(Calendar.DAY_OF_MONTH)+6);
+		System.out.println(c);
+		
+		
+	
+		
+	}
+	public static void calDayLoving(int day,int month,int year,Calendar c) {
+		
+		int dayTime=c.getActualMaximum(Calendar.DAY_OF_MONTH)-c.get(Calendar.DAY_OF_MONTH);
+		int monthTime=0;
+		int yearTime=0;
+		c.set(Calendar.DAY_OF_MONTH, 1);
+		c.set(Calendar.MONTH, c.get(Calendar.MONTH)+1);
+		
+		while(!(month== c.get(Calendar.MONTH)&&year==c.get(Calendar.YEAR))) {
+			monthTime++;
+		    dayTime=dayTime+c.getActualMaximum(Calendar.DATE);
+		    c.set(Calendar.MONTH, c.get(Calendar.MONTH)+1);
+		    System.out.println(c.get(Calendar.MONTH));
+		    if(c.get(Calendar.MONTH)==0) {
+		    	c.set(Calendar.YEAR, c.get(Calendar.YEAR)+1);
+		    	yearTime++;
+		    	}
+		}
+		System.out.println(dayTime +" "+monthTime+ " "+ yearTime);
+	}
+	public static Calendar scanfĐayLoving() {
+		Scanner sc =new  Scanner(System.in);
+		Calendar c=Calendar.getInstance();
+		System.out.print("Nhập vào Ngày : ");
+		int dayLoving=Integer.parseInt(sc.nextLine());
+		c.set(Calendar.DATE, dayLoving);
+		
+		System.out.print("Nhập vào Tháng : ");
+		int MonthLoving=Integer.parseInt(sc.nextLine());
+		c.set(Calendar.MONTH, MonthLoving);
+		
+		System.out.print("Nhập vào Năm : ");
+		int yearLoving=Integer.parseInt(sc.nextLine());
+		c.set(Calendar.YEAR, yearLoving);
+		
+		return c;
+	}
+}

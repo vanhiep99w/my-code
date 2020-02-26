@@ -1,0 +1,7 @@
+mục đích : tăng khả năng tái sử dụng code chánh khả năng các hàm có cùng chức năng mà khác tên 
+
+trươc java8 java không có đa kế thừa 
+sau java8 trong java có thể đa kế thừa bằng các từ khóa default trong các interface
+mục đích của default ,static(chỉ có trong java8 trong interface) :
++ thực hiện đa kế thừa 
++ hạn chế sinh code

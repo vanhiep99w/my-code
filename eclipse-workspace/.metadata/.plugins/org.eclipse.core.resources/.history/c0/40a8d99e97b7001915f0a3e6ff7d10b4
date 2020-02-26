@@ -1,0 +1,18 @@
+package datetimeutils.java08;
+
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.format.DateTimeFormatter;
+
+public class Ex01 {
+	//Complain : LocalDate(prtiod) - LocalTime - LocalDateTime
+
+	public static void main(String[] args) {
+		LocalDate lDate= LocalDate.of(2019, Month.AUGUST, 05);
+		lDate=lDate.withDayOfMonth(22).plusDays(10);
+		DateTimeFormatter dtf=DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		String formatedValue=dtf.format(lDate);
+		System.out.println(formatedValue);
+	}
+	
+}

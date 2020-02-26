@@ -1,0 +1,14 @@
+package datetimeutils.java08;
+
+import java.time.LocalDate;
+import java.time.Month;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		LocalDate lDate= LocalDate.of(2019, Month.AUGUST, 05);
+		lDate=lDate.withDayOfMonth(22)
+		System.out.println(lDate);
+	}
+	
+}

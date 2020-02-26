@@ -1,0 +1,12 @@
+package datetimeutils.java08;
+
+import java.time.LocalDate;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		LocalDate lDate= LocalDate.now();
+		System.out.println(lDate);
+	}
+	
+}

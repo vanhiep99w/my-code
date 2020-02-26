@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;homework2.Exx04&apos; to &apos;Ex04&apos;&#x0D;&#x0A;- Original project: &apos;Lesson11&apos;&#x0D;&#x0A;- Original element: &apos;homework2.Exx04&apos;&#x0D;&#x0A;- Renamed element: &apos;homework2.Ex04&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Exx04&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;homework2{Exx04.java[Exx04" matchStrategy="1" name="Ex04" qualified="false" references="true" similarDeclarations="false" stamp="1572649978650" textual="false" version="1.0"/>
+</session>

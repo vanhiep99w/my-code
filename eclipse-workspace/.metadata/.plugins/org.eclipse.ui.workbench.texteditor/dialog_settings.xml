@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="Socket"/>
+		<list key="findhistory">
+			<item value="Socket"/>
+			<item value="Quản lý người dùng"/>
+			<item value="Quản lý tin tức"/>
+			<item value="thêm danh mục "/>
+			<item value="menu-item-20"/>
+			<item value="menu-item-2"/>
+			<item value="cd"/>
+			<item value="IntStream.rangeClosed(1, 100).boxed() .flatMap(a -&gt;IntStream.rangeClosed(a,"/>
+			<item value="for(int i=1;i&lt;sinhViens.length;i++) { int"/>
+			<item value=""/>
+		</list>
+		<list key="replacehistory">
+			<item value="id"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="320"/>
+		<item key="DIALOG_Y_ORIGIN" value="217"/>
+		<item key="DIALOG_WIDTH" value="336"/>
+		<item key="DIALOG_HEIGHT" value="454"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>
